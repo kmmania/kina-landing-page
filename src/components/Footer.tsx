@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {ArrowUp, Instagram, Linkedin, Mail, Send, Twitter, X} from 'lucide-react';
+import {ArrowUp, Mail, Send, X} from 'lucide-react';
+import {FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import {Button} from './Button';
 
 export const Footer: React.FC = () => {
@@ -63,10 +64,11 @@ export const Footer: React.FC = () => {
                 {/* Socials & Top */}
                 <div className="flex items-center gap-6">
                     <div className="flex gap-4">
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><Twitter
+                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaTwitter
                             size={20}/></a>
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><Instagram size={20}/></a>
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><Linkedin
+                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaInstagram
+                            size={20}/></a>
+                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaLinkedin
                             size={20}/></a>
                     </div>
 
