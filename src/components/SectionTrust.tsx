@@ -101,7 +101,7 @@ export const SectionTrust: React.FC = () => {
                             </li>
                         </ul>
 
-                        <a href="#hero-waitlist"
+                        <a href="#prototype"
                            className="mt-auto group flex items-center gap-2 bg-kina-green text-white px-4 py-2.5 rounded-lg font-bold text-sm shadow-md hover:bg-green-600 transition-colors cursor-pointer">
                             <MousePointer2 size={16}/>
                             <span>See Interactive Demo</span>

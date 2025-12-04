@@ -47,7 +47,8 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
     }
 
     return (
-        <form onSubmit={handleSubmit} className={`flex gap-4 w-full ${vertical ? 'flex-col' : 'flex-col sm:flex-row'}`}>
+        <form id={id} onSubmit={handleSubmit}
+              className={`flex gap-4 w-full ${vertical ? 'flex-col' : 'flex-col sm:flex-row'}`}>
             <input
                 type="email"
                 value={email}

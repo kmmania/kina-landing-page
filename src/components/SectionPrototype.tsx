@@ -4,7 +4,7 @@ import {Globe, MousePointerClick, Users} from 'lucide-react';
 
 export const SectionPrototype: React.FC = () => {
     return (
-        <section className="bg-kina-text text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
+        <section id="prototype" className="bg-kina-text text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 pointer-events-none"></div>
 
