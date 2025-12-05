@@ -1,5 +1,6 @@
 import React from 'react';
 import {ArrowRight, BrainCircuit, ExternalLink, FileText, MousePointer2} from 'lucide-react';
+import giaoImg from '../assets/images/giao.png';
 
 export const SectionTrust: React.FC = () => {
     return (
@@ -34,7 +35,7 @@ export const SectionTrust: React.FC = () => {
                         <div
                             className="w-24 h-24 mb-6 rounded-full overflow-hidden border-4 border-white shadow-md ring-1 ring-gray-100">
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+                                src={giaoImg}
                                 alt="Dac Linh Giao NGUYEN"
                                 className="w-full h-full object-cover"
                             />
@@ -44,7 +45,8 @@ export const SectionTrust: React.FC = () => {
                             <p className="font-bold text-lg text-kina-text">Dac Linh Giao NGUYEN</p>
                             <p className="text-kina-subtext text-xs uppercase font-medium mt-1">Marathoner & Field
                                 Researcher</p>
-                            <a href="#" className="text-xs text-kina-blue hover:underline flex items-center gap-1 mt-2">
+                            <a href="https://www.linkedin.com/in/daclinhgiao-nguyen/"
+                               className="text-xs text-kina-blue hover:underline flex items-center gap-1 mt-2">
                                 View Profile <ExternalLink size={10}/>
                             </a>
                         </div>
