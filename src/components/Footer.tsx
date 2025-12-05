@@ -108,37 +108,65 @@ export const Footer: React.FC = () => {
                             {/* Privacy Policy Content */}
                             {activeModal === 'privacy' && (
                                 <div>
-                                    <h3 className="text-2xl font-bold text-kina-text mb-6">Privacy Policy</h3>
+                                    <h3 className="text-2xl font-bold text-kina-text mb-2">KINA Privacy Policy</h3>
+                                    <p className="text-sm text-gray-500 mb-6 font-medium">Last Updated: December
+                                        2025</p>
+
                                     <div className="prose prose-sm max-w-none text-gray-600 space-y-4">
-                                        <p className="font-bold text-gray-800">Last updated: October 2025</p>
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">1. Introduction</h4>
                                         <p>
-                                            At KINA, we take your privacy seriously. This Privacy Policy explains how we
-                                            collect, use, disclosure, and safeguard your information when you visit our
-                                            website or use our application.
+                                            Welcome to KINA ("we," "our," or "us"). We are committed to protecting your
+                                            personal information and your right to privacy. This policy explains how we
+                                            collect, use, and share your information when you visit our landing page and
+                                            join our waitlist.
                                         </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">1. Information We
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">2. Information We
                                             Collect</h4>
-                                        <p>
-                                            [Insert detailed collection practices here: Personal Data, Derivative Data,
-                                            Financial Data, Mobile Device Data, etc.]
-                                        </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">2. Use of Your
+                                        <ul className="list-disc pl-5 space-y-1">
+                                            <li><strong>Personal Information:</strong> We collect your email address and
+                                                first name when you voluntarily sign up for our waitlist or download our
+                                                Manifesto.
+                                            </li>
+                                            <li><strong>Usage Data:</strong> We may use standard cookies or analytics
+                                                tools (like Vercel Analytics) to understand how visitors interact with
+                                                our website (e.g., pages visited, time spent).
+                                            </li>
+                                        </ul>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">3. How We Use Your
                                             Information</h4>
+                                        <p>We use your data for the following purposes only:</p>
+                                        <ul className="list-disc pl-5 space-y-1">
+                                            <li>To deliver the "Athlete of 2025" Manifesto.</li>
+                                            <li>To send you updates regarding the KINA project and our Kickstarter
+                                                campaign.
+                                            </li>
+                                            <li>To notify you when early access spots become available.</li>
+                                        </ul>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">4. Data Sharing</h4>
                                         <p>
-                                            [Insert usage details: Account management, Email correspondence, App
-                                            functionality, etc.]
+                                            We never sell your personal data. We may share data with trusted third-party
+                                            service providers solely for the purpose of operating our site (e.g., email
+                                            service providers, hosting services), who are bound by confidentiality
+                                            obligations.
                                         </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">3. Disclosure of Your
-                                            Information</h4>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">5. Your Rights</h4>
                                         <p>
-                                            [Insert disclosure policies: By Law, Third-Party Service Providers, etc.]
+                                            You can unsubscribe from our emails at any time by clicking the
+                                            "unsubscribe" link in the footer of our emails. If you wish to have your
+                                            data completely deleted, please contact us at support@kina.run.
                                         </p>
-                                        <div className="bg-gray-50 p-4 rounded-lg mt-6 border-l-4 border-kina-green">
-                                            <p className="text-sm italic">
-                                                This is a placeholder for the full legal document. Please replace with
-                                                your official Privacy Policy before launch.
-                                            </p>
-                                        </div>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">6. Contact</h4>
+                                        <p>
+                                            For any questions about this policy, please <button
+                                            onClick={() => setActiveModal('contact')}
+                                            className="text-kina-blue hover:underline font-bold bg-transparent border-none p-0 cursor-pointer">contact
+                                            us here</button>.
+                                        </p>
                                     </div>
                                 </div>
                             )}
@@ -146,34 +174,62 @@ export const Footer: React.FC = () => {
                             {/* Terms of Service Content */}
                             {activeModal === 'terms' && (
                                 <div>
-                                    <h3 className="text-2xl font-bold text-kina-text mb-6">Terms of Service</h3>
+                                    <h3 className="text-2xl font-bold text-kina-text mb-2">KINA Terms of Service</h3>
+                                    <p className="text-sm text-gray-500 mb-6 font-medium">Last Updated: December
+                                        2025</p>
+
                                     <div className="prose prose-sm max-w-none text-gray-600 space-y-4">
-                                        <p className="font-bold text-gray-800">Last updated: October 2025</p>
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">1. Acceptance of Terms</h4>
                                         <p>
-                                            Please read these Terms of Service ("Terms", "Terms of Service") carefully
-                                            before using the KINA website and mobile application (the "Service")
-                                            operated by KINA ("us", "we", or "our").
+                                            By accessing and using this website, you agree to be bound by these Terms of
+                                            Service. If you do not agree with any part of these terms, you must not use
+                                            this website.
                                         </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">1. Conditions of Use</h4>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">2. Nature of Service</h4>
                                         <p>
-                                            [Insert conditions: Acceptance of terms, modification of terms, etc.]
+                                            KINA is currently in a pre-launch phase. Signing up for the waitlist does
+                                            not guarantee access to the final product. The features described on this
+                                            page are subject to change as we develop the product.
                                         </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">2. Intellectual
-                                            Property</h4>
-                                        <p>
-                                            [Insert IP clause: Content ownership, trademarks, copyrights, etc.]
-                                        </p>
-                                        <h4 className="font-bold text-gray-800 text-lg mt-4">3. Termination</h4>
-                                        <p>
-                                            [Insert termination clause: Grounds for account termination, notice periods,
-                                            etc.]
-                                        </p>
-                                        <div className="bg-gray-50 p-4 rounded-lg mt-6 border-l-4 border-kina-blue">
-                                            <p className="text-sm italic">
-                                                This is a placeholder for the full legal document. Please replace with
-                                                your official Terms of Service before launch.
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">3. Medical Disclaimer
+                                            (IMPORTANT)</h4>
+                                        <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                                            <p className="text-gray-700">
+                                                KINA is an AI companion for running and well-being, not a medical
+                                                device. The content provided in our Manifesto, emails, and on this
+                                                website is for informational and educational purposes only. It is not
+                                                intended to be a substitute for professional medical advice, diagnosis,
+                                                or treatment. Always seek the advice of your physician or other
+                                                qualified health provider before starting any new exercise program. You
+                                                assume full responsibility for any risks, injuries, or damages, known or
+                                                unknown, which might occur as a result of using our information.
                                             </p>
                                         </div>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">4. Intellectual
+                                            Property</h4>
+                                        <p>
+                                            All content on this website, including text, graphics, logos, and the
+                                            "Athlete of 2025" Manifesto, is the property of KINA and protected by
+                                            international copyright laws. You may share the Manifesto freely as long as
+                                            it remains unaltered and attributed to KINA.
+                                        </p>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">5. Limitation of
+                                            Liability</h4>
+                                        <p>
+                                            In no event shall KINA, nor its directors, employees, or partners, be liable
+                                            for any indirect, incidental, special, consequential, or punitive damages
+                                            arising out of your use of our website or content.
+                                        </p>
+
+                                        <h4 className="font-bold text-gray-800 text-lg mt-4">6. Governing Law</h4>
+                                        <p>
+                                            These Terms shall be governed by and defined following the laws of France,
+                                            without regard to its conflict of law provisions.
+                                        </p>
                                     </div>
                                 </div>
                             )}
