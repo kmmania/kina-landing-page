@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Button} from './Button';
 import {BookOpenCheck, Check, Download, Gift, Lock, Quote, X} from 'lucide-react';
+import manifestoCover from '../assets/images/kina-manifesto.png';
 
 export const SectionManifesto: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -46,7 +47,7 @@ export const SectionManifesto: React.FC = () => {
                     className="md:w-5/12 bg-gray-100 flex items-center justify-center p-8 md:p-12 relative overflow-hidden group min-h-[450px]">
                     <div className="absolute inset-0 bg-gradient-to-br from-kina-blue/10 to-transparent"></div>
                     <img
-                        src="https://placehold.co/400x600/ffffff/333333?text=The+Athlete+of+2025%0AManifesto+Cover&font=playfair"
+                        src={manifestoCover}
                         alt="The Athlete of 2025 Manifesto Cover"
                         className="max-w-[260px] md:max-w-[280px] w-full h-auto shadow-2xl rounded-lg transform md:-rotate-3 md:translate-x-4 transition-all duration-500 group-hover:rotate-0 group-hover:scale-105 group-hover:shadow-3xl z-10"
                     />
