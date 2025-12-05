@@ -1,32 +1,35 @@
 import React from 'react';
 import type {Testimonial} from '../types';
 import {Activity, ExternalLink, MapPin, Quote, Timer} from 'lucide-react';
+import dutotImg from '../assets/images/dutot.jpg';
+import salomeImg from '../assets/images/salome.png';
+import jullyImg from '../assets/images/jully.png';
 
 const testimonials: Testimonial[] = [
     {
         author: "Jully Avila",
         role: "Trail and Marathon Runner, Content Creator",
         location: "Philippines",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=300&h=300",
+        image: jullyImg,
         quote: "When I saw KINA's vision of technology that converses instead of judges, it clicked. Running should feel like freedom, not a performance review. I'm supporting this project because it promises to bring joy back to training— and that's something my generation needs to see.",
         highlight: "Running should feel like freedom, not a performance review.",
-        socialLink: "#"
+        socialLink: "https://www.instagram.com/iaamvinee/"
     },
     {
         author: "Salomé Brun",
-        role: "Marathon Runner",
+        role: "Elite Marathon Runner",
         location: "France / Ethiopia",
         stats: "2:30 PB",
-        image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=300&h=300",
+        image: salomeImg,
         quote: "In Ethiopian running culture, we say the body knows before the mind understands. KINA's vision of creating a companion that truly listens—not just measures—honors this wisdom. I want to see this exist because running deserves technology that respects our intuition.",
         highlight: "the body knows before the mind understands.",
-        socialLink: "#"
+        socialLink: "https://www.instagram.com/shalom_b_/"
     },
     {
         author: "Vincent Dutot",
         role: "Researcher and Marathon Runner",
         location: "France",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300&h=300",
+        image: dutotImg,
         quote: "I teach social media for a living. I run for balance. KINA's vision of bridging data and intuition through dialogue speaks to both sides of me. This is the kind of technology I want to exist—smart enough to know when to guide, and wise enough to know when to listen.",
         highlight: "KINA's vision of bridging data and intuition through dialogue speaks to both sides of me.",
         socialLink: "https://www.linkedin.com/in/vincentdutot/"
