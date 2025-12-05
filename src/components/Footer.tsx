@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {ArrowUp, Mail, Send, X} from 'lucide-react';
 import {FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import {Button} from './Button';
+import kinaLogo from '../assets/images/kina-logo.png';
 
 export const Footer: React.FC = () => {
     const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | 'contact' | null>(null);
@@ -37,10 +38,11 @@ export const Footer: React.FC = () => {
                 {/* Brand & Copyright */}
                 <div className="flex flex-col items-center md:items-start gap-4">
                     <div className="flex items-center gap-2">
-                        <div
-                            className="w-8 h-8 bg-kina-green rounded flex items-center justify-center transform hover:rotate-6 transition-transform duration-300">
-                            <span className="text-white font-bold text-xl italic pr-0.5">k</span>
-                        </div>
+                        <img
+                            src={kinaLogo}
+                            alt="KINA Logo"
+                            className="h-12 md:h-14 w-auto drop-shadow-sm"
+                        />
                         <span className="font-bold text-xl tracking-tight">KINA</span>
                     </div>
                     <p className="text-xs text-gray-500">
@@ -64,11 +66,14 @@ export const Footer: React.FC = () => {
                 {/* Socials & Top */}
                 <div className="flex items-center gap-6">
                     <div className="flex gap-4">
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaTwitter
+                        <a href="https://x.com/kmmania"
+                           className="text-gray-500 hover:text-white transition-colors"><FaTwitter
                             size={20}/></a>
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaInstagram
+                        <a href="https://www.instagram.com/kmmania/"
+                           className="text-gray-500 hover:text-white transition-colors"><FaInstagram
                             size={20}/></a>
-                        <a href="#" className="text-gray-500 hover:text-white transition-colors"><FaLinkedin
+                        <a href="https://www.linkedin.com/company/kmmania/"
+                           className="text-gray-500 hover:text-white transition-colors"><FaLinkedin
                             size={20}/></a>
                     </div>
 
