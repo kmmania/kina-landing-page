@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300&h=300",
         quote: "I teach social media for a living. I run for balance. KINA's vision of bridging data and intuition through dialogue speaks to both sides of me. This is the kind of technology I want to exist—smart enough to know when to guide, and wise enough to know when to listen.",
         highlight: "KINA's vision of bridging data and intuition through dialogue speaks to both sides of me.",
-        socialLink: "#"
+        socialLink: "https://www.linkedin.com/in/vincentdutot/"
     }
 ];
 
