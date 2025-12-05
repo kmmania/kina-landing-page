@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {History, Play, Trophy, Zap} from 'lucide-react';
+import ytThumb from '../assets/images/thumb_yt.jpg';
 
 export const SectionSolution: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -27,7 +28,7 @@ export const SectionSolution: React.FC = () => {
                             onClick={() => setIsPlaying(true)}
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1596727147705-54a9d0943f72?q=80&w=2069&auto=format&fit=crop"
+                                src={ytThumb}
                                 alt="Video Thumbnail"
                                 className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                             />
