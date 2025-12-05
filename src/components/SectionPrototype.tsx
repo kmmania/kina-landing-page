@@ -1,6 +1,7 @@
 import React from 'react';
 import {EmailCapture} from './EmailCapture';
 import {Globe, MousePointerClick, Users} from 'lucide-react';
+import kinaSS from '../assets/images/kina-ss.png';
 
 export const SectionPrototype: React.FC = () => {
     return (
@@ -70,7 +71,7 @@ export const SectionPrototype: React.FC = () => {
                             className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white relative flex flex-col">
                             {/* Fallback Image / Placeholder */}
                             <img
-                                src="https://placehold.co/300x600/f8f8f8/333333?text=App+Interface+Preview&font=roboto"
+                                src={kinaSS}
                                 alt="KINA Interface Prototype"
                                 className="w-full h-full object-cover"
                             />
