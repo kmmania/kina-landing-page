@@ -1,29 +1,21 @@
 import React from 'react';
 import {EmailCapture} from './EmailCapture';
 import {ArrowDown, BookOpen, Rocket} from 'lucide-react';
+import kinaLogo from '../assets/images/kina-logo.png';
 
 export const SectionHero: React.FC = () => {
     return (
         <section className="relative pt-20 pb-28 overflow-hidden bg-kina-bg min-h-[90vh] flex flex-col justify-center">
-            {/* Emotional Background Texture */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2074&auto=format&fit=crop"
-                    alt="Runner in flow state"
-                    className="w-full h-full object-cover opacity-10 grayscale mix-blend-multiply"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-kina-bg"></div>
-            </div>
-
             <div
                 className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
                 {/* Logo Stylisé */}
                 <div className="mb-8 transition-transform hover:scale-105 duration-500">
                     <div className="flex items-center gap-3">
-                        <div
-                            className="w-10 h-10 bg-kina-green rounded-lg flex items-center justify-center transform -rotate-6 shadow-lg">
-                            <span className="text-white font-bold text-2xl italic pr-1">k</span>
-                        </div>
+                        <img
+                            src={kinaLogo}
+                            alt="KINA Logo"
+                            className="h-12 md:h-14 w-auto drop-shadow-sm"
+                        />
                         <h1 className="text-3xl font-bold tracking-tighter text-kina-text">
                             KINA
                         </h1>
