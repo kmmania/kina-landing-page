@@ -8,7 +8,6 @@ export const SectionHero: React.FC = () => {
         <section className="relative pt-20 pb-28 overflow-hidden bg-kina-bg min-h-[90vh] flex flex-col justify-center">
             <div
                 className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-                {/* Logo Stylisé */}
                 <div className="mb-8 transition-transform hover:scale-105 duration-500">
                     <div className="flex items-center gap-3">
                         <img
@@ -84,11 +83,10 @@ export const SectionHero: React.FC = () => {
                     </div>
 
                     <div className="w-full">
-                        {/* Removed redundant label "RESERVE YOUR SPOT NOW" */}
                         <EmailCapture
                             id="hero-waitlist"
                             buttonText="Join the Waitlist & Get the Manifesto"
-                            variant="secondary" /* Changed to Green as requested */
+                            variant="secondary"
                         />
 
                         <div
