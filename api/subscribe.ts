@@ -8,7 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const {email, source, firstName} = req.body;
 
     if (!email || !email.includes('@')) {
-        return res.status(400).json({error: 'Email invalide'});
+        return res.status(400).json({error: 'Invalid Email'});
     }
 
     try {
@@ -34,12 +34,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         } else {
             const errorData = await response.json();
             if (errorData.code === 'duplicate_parameter') {
-                return res.status(200).json({success: true, message: "Déjà inscrit"});
+                return res.status(200).json({success: true, message: "Already subscribed."});
             }
             return res.status(500).json({error: errorData.message});
         }
     } catch (error) {
         console.error('Brevo error :', error);
-        return res.status(500).json({error: 'Erreur interne'});
+        return res.status(500).json({error: 'Internal error'});
     }
 }
