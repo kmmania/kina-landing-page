@@ -17,7 +17,8 @@ const tiers: PricingTier[] = [
         ],
         emailId: "tier-1",
         ctaText: "Secure Co-Creator Access",
-        priorityLabel: "[ RESERVE YOUR CO-CREATOR SPOT ]"
+        priorityLabel: "[ RESERVE YOUR CO-CREATOR SPOT ]",
+        source: "waitlist_tier_cocreator"
     },
     {
         name: "VISIONARY",
@@ -33,7 +34,8 @@ const tiers: PricingTier[] = [
         bestValue: true,
         emailId: "tier-2",
         ctaText: "Secure Visionary Access",
-        priorityLabel: "[ CLAIM YOUR VISIONARY ACCESS ]"
+        priorityLabel: "[ CLAIM YOUR VISIONARY ACCESS ]",
+        source: "waitlist_tier_visionary"
     },
     {
         name: "LEGEND",
@@ -49,7 +51,8 @@ const tiers: PricingTier[] = [
         exclusive: true,
         emailId: "tier-3",
         ctaText: "Secure Legend Spot",
-        priorityLabel: "[ SECURE YOUR EXCLUSIVE LEGEND SPOT ]"
+        priorityLabel: "[ SECURE YOUR EXCLUSIVE LEGEND SPOT ]",
+        source: "waitlist_tier_legend"
     }
 ];
 
@@ -161,6 +164,7 @@ export const SectionTiers: React.FC = () => {
                                         placeholder="Your Email"
                                         variant={tier.exclusive ? "dark" : "secondary"}
                                         vertical={true}
+                                        source={tier.source}
                                     />
                                 </div>
                             </div>
