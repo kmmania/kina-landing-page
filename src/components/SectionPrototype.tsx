@@ -44,7 +44,12 @@ export const SectionPrototype: React.FC = () => {
                             <Users size={14} className="text-kina-green"/> Join 300+ early supporters
                         </p>
 
-                        <EmailCapture id="prototype-access" buttonText="Get Demo Access" variant="secondary"/>
+                        <EmailCapture
+                            id="prototype-access"
+                            buttonText="Get Demo Access"
+                            variant="secondary"
+                            source="waitlist_direct"
+                        />
 
                         {/* Technical Reassurance */}
                         <p className="text-xs text-gray-400 mt-4 flex items-center gap-2 opacity-80">
