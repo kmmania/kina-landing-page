@@ -107,6 +107,7 @@ export const SectionFinalCTA: React.FC = () => {
                             buttonText="Join the Waitlist Now"
                             placeholder="Enter your email to secure priority access"
                             variant="secondary"
+                            source="waitlist_direct"
                         />
                     </div>
 
