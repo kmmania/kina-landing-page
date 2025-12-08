@@ -1,24 +1,52 @@
 import React, {useState} from 'react';
 import {Button} from './Button';
-import {BookOpenCheck, Check, Download, Gift, Lock, Quote, X} from 'lucide-react';
+import {AlertCircle, BookOpenCheck, Check, Download, Gift, Lock, Quote, X} from 'lucide-react';
 import manifestoCover from '../assets/images/kina-manifesto.png';
 
 export const SectionManifesto: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [formData, setFormData] = useState({name: '', email: '', consent: false});
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!formData.consent) return;
+
+        if (!formData.email || !formData.consent) return;
 
         setStatus('submitting');
+        setErrorMessage('');
 
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const res = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    email: formData.email,
+                    firstName: formData.name,
+                    source: 'manifesto_download'
+                }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                setStatus('error');
+                setErrorMessage(data.error || "An error occurred.");
+                return;
+            }
+
+            // SUCCÈS
             setStatus('success');
-            console.log('Manifesto Request:', formData);
-        }, 1500);
+
+        } catch (error) {
+            setStatus('error');
+            if (error instanceof Error) {
+                setErrorMessage(error.message);
+            } else {
+                setErrorMessage("An unexpected error occurred.");
+            }
+        }
     };
 
     const resetForm = () => {
@@ -26,6 +54,7 @@ export const SectionManifesto: React.FC = () => {
         setTimeout(() => {
             setStatus('idle');
             setFormData({name: '', email: '', consent: false});
+            setErrorMessage('');
         }, 300);
     }
 
@@ -110,8 +139,10 @@ export const SectionManifesto: React.FC = () => {
                             <X size={20}/>
                         </button>
 
+                        {/* Modal Content (Success or Form) */}
                         {status === 'success' ? (
-                            <div className="p-12 text-center flex flex-col items-center justify-center min-h-[400px]">
+                            <div
+                                className="p-12 text-center flex flex-col items-center justify-center min-h-[400px] animate-fade-in">
                                 <div
                                     className="w-20 h-20 bg-kina-green/10 text-kina-green rounded-full flex items-center justify-center mb-6 animate-bounce">
                                     <Check size={40} strokeWidth={3}/>
@@ -128,11 +159,10 @@ export const SectionManifesto: React.FC = () => {
                             <div className="flex flex-col">
                                 {/* Modal Header with Visual */}
                                 <div className="bg-gray-50 p-6 sm:p-8 border-b border-gray-100 flex items-center gap-6">
-                                    <img
-                                        src="https://placehold.co/100x140/ffffff/333333?text=Manifesto&font=playfair"
-                                        alt="Manifesto Thumbnail"
-                                        className="w-16 h-auto shadow-md rounded -rotate-3 hidden sm:block"
-                                    />
+                                    <div
+                                        className="hidden sm:block shadow-md rounded transform -rotate-3 overflow-hidden w-16 h-20 bg-white border border-gray-200">
+                                        <img src={manifestoCover} alt="Cover" className="w-full h-full object-cover"/>
+                                    </div>
                                     <div>
                                         <h3 className="text-xl sm:text-2xl font-bold text-kina-text leading-tight mb-1">
                                             Where should we send your Manifesto?
@@ -194,9 +224,18 @@ export const SectionManifesto: React.FC = () => {
                                                     size={14} strokeWidth={3}/>
                                             </div>
                                             <span className="text-sm text-gray-500 leading-snug select-none">
-                          I agree to receive the Manifesto and updates about KINA's launch. Unsubscribe anytime.
-                        </span>
+                                                I agree to receive the Manifesto and updates about KINA's launch. Unsubscribe anytime.
+                                            </span>
                                         </label>
+
+                                        {/* Error Message */}
+                                        {status === 'error' && (
+                                            <div
+                                                className="p-3 bg-red-50 text-red-600 text-sm rounded-lg flex items-center gap-2">
+                                                <AlertCircle size={16}/>
+                                                {errorMessage}
+                                            </div>
+                                        )}
 
                                         {/* CTA Button */}
                                         <Button
