@@ -10,6 +10,7 @@ export interface PricingTier {
     emailId: string;
     ctaText?: string; // Added for specific CTA buttons
     priorityLabel?: string; // Added for specific priority access text
+    source?: string;
 }
 
 export interface Testimonial {
