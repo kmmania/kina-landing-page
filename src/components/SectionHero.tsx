@@ -87,6 +87,7 @@ export const SectionHero: React.FC = () => {
                             id="hero-waitlist"
                             buttonText="Join the Waitlist & Get the Manifesto"
                             variant="secondary"
+                            source="waitlist_direct"
                         />
 
                         <div
