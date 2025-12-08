@@ -5,7 +5,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({error: 'Method not allowed'});
     }
 
-    const {email, source} = req.body;
+    const {email, source, firstName} = req.body;
 
     if (!email || !email.includes('@')) {
         return res.status(400).json({error: 'Email invalide'});
@@ -23,6 +23,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 updateEnabled: true,
                 attributes: {
                     SOURCE: source || 'waitlist',
+                    FIRSTNAME: firstName
                 },
                 listIds: [2],
             }),
