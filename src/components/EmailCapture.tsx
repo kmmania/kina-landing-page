@@ -14,7 +14,7 @@ interface EmailCaptureProps {
 
 export const EmailCapture: React.FC<EmailCaptureProps> = ({
                                                               buttonText = "Join the Waitlist",
-                                                              placeholder = "Email Address",
+                                                              placeholder = "Your Email Address",
                                                               id,
                                                               source = "waitlist", // Default value
                                                               onSuccess,
