@@ -8,7 +8,7 @@ import jullyImg from '../assets/images/jully.png';
 const testimonials: Testimonial[] = [
     {
         author: "Jully Avila",
-        role: "Trail and Marathon Runner, Content Creator",
+        role: "Trail and Marathon Runner, Entrepreneur",
         location: "Philippines",
         image: jullyImg,
         quote: "When I saw KINA's vision of technology that converses instead of judges, it clicked. Running should feel like freedom, not a performance review. I'm supporting this project because it promises to bring joy back to training— and that's something my generation needs to see.",
