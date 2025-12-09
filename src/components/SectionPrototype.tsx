@@ -18,7 +18,7 @@ export const SectionPrototype: React.FC = () => {
                         PROOF OF CONCEPT
                     </div>
                     <h2 className="text-4xl sm:text-5xl font-bold mb-8 leading-tight">
-                        This isn't vaporware.<br/> <span className="text-kina-green">Try it yourself.</span>
+                        This isn't vaporware.<br/> <span className="text-kina-green">See it in action.</span>
                     </h2>
 
                     <div className="space-y-6 text-lg text-gray-300 mb-10">
@@ -28,7 +28,8 @@ export const SectionPrototype: React.FC = () => {
                         </p>
                         <div className="bg-white/5 p-4 rounded-lg border-l-4 border-kina-blue">
                             <p className="text-white">
-                                Every early supporter gets instant access to our working prototype — before anyone else.
+                                Our prototype is fully functional. Join the Founding Circle to be among the first to get
+                                hands-on access when our Kickstarter launches.
                             </p>
                         </div>
                     </div>
@@ -39,14 +40,14 @@ export const SectionPrototype: React.FC = () => {
                         <div
                             className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-kina-green to-kina-blue"></div>
 
-                        <h4 className="font-bold text-xl mb-2 text-white">Get Instant Demo Access</h4>
+                        <h4 className="font-bold text-xl mb-2 text-white">Secure your Priority Access</h4>
                         <p className="text-sm text-gray-400 mb-6 flex items-center gap-2">
                             <Users size={14} className="text-kina-green"/> Join 300+ early supporters
                         </p>
 
                         <EmailCapture
                             id="prototype-access"
-                            buttonText="Get Demo Access"
+                            buttonText="Join the Waitlist"
                             variant="secondary"
                             source="waitlist_direct"
                         />
