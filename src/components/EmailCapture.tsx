@@ -103,7 +103,7 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
                     ) : (
                         <>
                             {buttonText}
-                            {!vertical && <ArrowRight size={20}/>}
+                            {<ArrowRight size={20}/>}
                         </>
                     )}
                 </Button>
