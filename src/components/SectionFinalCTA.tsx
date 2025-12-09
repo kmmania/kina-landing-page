@@ -104,8 +104,10 @@ export const SectionFinalCTA: React.FC = () => {
                         className="w-full max-w-lg bg-white p-2.5 rounded-2xl shadow-[0_0_40px_rgba(153,199,148,0.15)] hover:shadow-[0_0_50px_rgba(153,199,148,0.25)] transition-shadow duration-500">
                         <EmailCapture
                             id="final-cta"
+                            placeholder="Enter your email to secure priority access"
                             buttonText="Join the Waitlist Now"
                             variant="secondary"
+                            vertical={true}
                             source="waitlist_direct"
                         />
                     </div>
