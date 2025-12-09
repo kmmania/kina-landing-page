@@ -1,7 +1,6 @@
 import React from 'react';
 import {EmailCapture} from './EmailCapture';
 import {BookOpenCheck, Gift, Lock, Quote} from 'lucide-react';
-// Importation de l'image locale
 import manifestoCover from '../assets/images/kina-manifesto.png';
 
 export const SectionManifesto: React.FC = () => {
