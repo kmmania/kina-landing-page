@@ -25,7 +25,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                     SOURCE: source || 'waitlist',
                     FIRSTNAME: firstName
                 },
-                listIds: [2],
+                listIds: [4],
             }),
         });
 
