@@ -105,7 +105,6 @@ export const SectionFinalCTA: React.FC = () => {
                         <EmailCapture
                             id="final-cta"
                             buttonText="Join the Waitlist Now"
-                            placeholder="Enter your email to secure priority access"
                             variant="secondary"
                             source="waitlist_direct"
                         />
