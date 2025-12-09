@@ -161,7 +161,6 @@ export const SectionTiers: React.FC = () => {
                                     <EmailCapture
                                         id={tier.emailId}
                                         buttonText={tier.ctaText}
-                                        placeholder="Your Email"
                                         variant={tier.exclusive ? "dark" : "secondary"}
                                         vertical={true}
                                         source={tier.source}
