@@ -68,7 +68,6 @@ export const SectionManifesto: React.FC = () => {
                         <EmailCapture
                             id="manifesto-access"
                             buttonText="Join the Waitlist & Get the Manifesto"
-                            placeholder="Email address"
                             variant="dark"
                             vertical={true}
                             source="waitlist_direct"
