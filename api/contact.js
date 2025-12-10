@@ -9,14 +9,9 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Missing fields' });
   }
 
-  // CONFIGURATION:
-  // 1. BREVO_API_KEY: Votre clé API Brevo (Vercel Env Var)
-  // 2. CONTACT_EMAIL: L'email qui reçoit les messages (Vercel Env Var) -> C'est là que vous recevrez les notifs.
-  // 3. SENDER_EMAIL: Par défaut 'no-reply@kmmania.com' car votre domaine est validé.
   
   const apiKey = process.env.BREVO_API_KEY;
   const contactEmail = process.env.CONTACT_EMAIL;
-  // Utilisation de votre domaine validé pour assurer que le mail n'arrive pas en spam
   const senderEmail = process.env.SENDER_EMAIL || "no-reply@kmmania.com";
 
   if (!apiKey || !contactEmail) {
@@ -43,7 +38,6 @@ export default async function handler(req, res) {
             name: "KINA Admin"
           }
         ],
-        // C'est ici que la magie opère : quand vous ferez "Répondre", ça ira au visiteur
         replyTo: {
           email: email,
           name: name
