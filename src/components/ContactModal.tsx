@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { X, Mail, Send, AlertCircle } from 'lucide-react';
-import { Button } from './Button';
+import React, {useState} from 'react';
+import {X, Mail, Send, AlertCircle} from 'lucide-react';
+import {Button} from './Button';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -26,7 +26,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     };
     
     try {
-      // Appel à la fonction serverless (api/contact.js)
+      // Serverless function call (api/contact.js)
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -41,7 +41,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
 
       setFormStatus('success');
       
-      // Fermeture automatique après succès
+      // Automatic closing after success
       setTimeout(() => {
         onClose();
         setTimeout(() => setFormStatus('idle'), 300);
