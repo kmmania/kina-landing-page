@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {ArrowUp, Mail, Send, X} from 'lucide-react';
+import {ArrowUp, X} from 'lucide-react';
 import {FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
-import {Button} from './Button';
 import kinaLogo from '../assets/images/kina-logo.png';
+import { ContactModal } from './ContactModal';
 
 export const Footer: React.FC = () => {
     const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | 'contact' | null>(null);
-    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -17,18 +16,6 @@ export const Footer: React.FC = () => {
 
     const closeModal = () => {
         setActiveModal(null);
-        setFormStatus('idle');
-    };
-
-    const handleContactSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setFormStatus('submitting');
-        setTimeout(() => {
-            setFormStatus('success');
-            setTimeout(() => {
-                closeModal();
-            }, 2000);
-        }, 1500);
     };
 
     return (
@@ -235,7 +222,11 @@ export const Footer: React.FC = () => {
                             )}
 
                             {/* Contact Support Content */}
-                            {activeModal === 'contact' && (
+                            <ContactModal 
+                                isOpen={activeModal === 'contact'} 
+                                onClose={closeModal} 
+                            />
+                            {/* {activeModal === 'contact' && (
                                 <div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div
@@ -247,59 +238,8 @@ export const Footer: React.FC = () => {
                                             <p className="text-sm text-gray-500">We're here to help.</p>
                                         </div>
                                     </div>
-
-                                    {formStatus === 'success' ? (
-                                        <div className="text-center py-12 flex flex-col items-center">
-                                            <div
-                                                className="inline-flex p-4 bg-green-100 text-green-600 rounded-full mb-4 animate-bounce">
-                                                <Send size={28}/>
-                                            </div>
-                                            <p className="font-bold text-xl text-gray-800 mb-2">Message Sent!</p>
-                                            <p className="text-gray-500">We'll get back to you shortly.</p>
-                                            <Button onClick={closeModal} variant="outline" className="mt-6">
-                                                Close
-                                            </Button>
-                                        </div>
-                                    ) : (
-                                        <form onSubmit={handleContactSubmit} className="space-y-5">
-                                            <div>
-                                                <label
-                                                    className="block text-sm font-bold text-gray-700 mb-1.5 ml-1">Name</label>
-                                                <input
-                                                    type="text"
-                                                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 text-gray-900 focus:bg-white focus:border-kina-blue focus:ring-4 focus:ring-kina-blue/10 outline-none transition-all"
-                                                    required
-                                                    placeholder="Your Name"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label
-                                                    className="block text-sm font-bold text-gray-700 mb-1.5 ml-1">Email</label>
-                                                <input
-                                                    type="email"
-                                                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 text-gray-900 focus:bg-white focus:border-kina-blue focus:ring-4 focus:ring-kina-blue/10 outline-none transition-all"
-                                                    required
-                                                    placeholder="your@email.com"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label
-                                                    className="block text-sm font-bold text-gray-700 mb-1.5 ml-1">Message</label>
-                                                <textarea
-                                                    rows={4}
-                                                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 text-gray-900 focus:bg-white focus:border-kina-blue focus:ring-4 focus:ring-kina-blue/10 outline-none transition-all resize-none"
-                                                    required
-                                                    placeholder="How can we help?"
-                                                ></textarea>
-                                            </div>
-                                            <Button type="submit" variant="secondary" fullWidth
-                                                    disabled={formStatus === 'submitting'}>
-                                                {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
-                                            </Button>
-                                        </form>
-                                    )}
                                 </div>
-                            )}
+                            )} */}
                         </div>
                     </div>
                 </div>
