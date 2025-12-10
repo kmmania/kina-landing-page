@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {ArrowUp, X} from 'lucide-react';
 import {FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import kinaLogo from '../assets/images/kina-logo.png';
-import { ContactModal } from './ContactModal';
+import {ContactModal} from './ContactModal';
 
 export const Footer: React.FC = () => {
     const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | 'contact' | null>(null);
