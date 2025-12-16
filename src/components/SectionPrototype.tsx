@@ -1,7 +1,7 @@
 import React from 'react';
 import {EmailCapture} from './EmailCapture';
 import {Globe, MousePointerClick, Users} from 'lucide-react';
-import kinaSS from '../assets/images/kina-ss.png';
+import demoVideo from '../assets/videos/KINA_DEMO.mp4';
 
 export const SectionPrototype: React.FC = () => {
     return (
@@ -34,7 +34,7 @@ export const SectionPrototype: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Premium Form Container - Removed max-w-md for full width alignment */}
+                    {/* Premium Form Container */}
                     <div
                         className="w-full bg-gradient-to-b from-white/10 to-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl relative overflow-hidden group">
                         <div
@@ -62,30 +62,30 @@ export const SectionPrototype: React.FC = () => {
 
                 {/* Phone Mockup Side */}
                 <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                    <div
-                        className="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl flex flex-col justify-start items-center overflow-hidden">
+                    <div className="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl flex flex-col justify-start items-center overflow-hidden">
                         {/* Phone Notch/Speaker */}
-                        <div
-                            className="h-[32px] w-[3px] bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-                        <div
-                            className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-                        <div
-                            className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-                        <div
-                            className="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-                        <div
-                            className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white relative flex flex-col">
-                            {/* Fallback Image / Placeholder */}
-                            <img
-                                src={kinaSS}
-                                alt="KINA Interface Prototype"
-                                className="w-full h-full object-cover"
-                            />
-                            <div
-                                className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/10"></div>
+                        <div className="h-[32px] w-[3px] bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+                        <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+                        <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+                        <div className="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                        
+                        {/* Screen Content Container */}
+                        <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white relative flex flex-col">
+                        {/* Video Implementation */}
+                        <video
+                            src={demoVideo}
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline // Crucial for iOS support to play inline
+                        />
+                        
+                        {/* Overlay Gradient for depth (Optional but keeps it looking premium) */}
+                        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/10"></div>
                         </div>
                     </div>
-                </div>
+                    </div>
 
             </div>
         </section>
